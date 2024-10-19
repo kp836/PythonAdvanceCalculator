@@ -1,5 +1,5 @@
 ### IS601 Midterm - Advanced Python Calculator
-# In Plugins (this) Branch:
+## In Plugins (this) Branch:
 1. Added requirements 
 2. Created a virtual environment
 3. Added all the plugins for the calculator
@@ -17,3 +17,8 @@
     *** Variance - Will give you the variance of the numbers provided (Needs to be more than 2 values) ***
     *** Standard Deviation - Will give you the standard deviation of all the numbers provided (Needs to be more than 2 values) ***
 4. Added a main file to start the calculation application
+## In Logs (this) Branch:
+1. Download Pytest, Pylint, Coverage files
+2. Tested for coverage (53%) 
+3. Added Log Files
+4. Added Github Action
