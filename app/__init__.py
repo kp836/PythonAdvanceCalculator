@@ -15,6 +15,10 @@ class App:
         load_dotenv()
         self.settings = self.load_environment_variables()
         self.settings.setdefault('ENVIRONMENT', 'PRODUCTION')
+
+        # Set an absolute path for the CSV file
+        relative_csv_path = 'data/history.csv'  # Change this to your relative path
+        self.settings['CSV_PATH'] = os.path.abspath(relative_csv_path)  # Convert to absolute path
         self.command_handler = CommandHandler()
 
     def configure_logging(self):
@@ -53,14 +57,17 @@ class App:
             if isinstance(item, type) and issubclass(item, Command) and item is not Command:
                 # Check if the __init__ method requires a command_handler
                 init_signature = inspect.signature(item.__init__)
-                if 'command_handler' in init_signature.parameters:
-                    # Pass command_handler when the constructor expects it
-                    self.command_handler.register_command(plugin_name, item(self.command_handler))
-                    logging.info(f"Command '{plugin_name} with command_handler registered from plugin '{plugin_name}'.")
-                else:
-                # If command_handler is not required, instantiate as usual
-                    self.command_handler.register_command(plugin_name, item())
-                    logging.info(f"Command '{plugin_name}' registered from plugin '{plugin_name}'.")
+                params = init_signature.parameters
+
+                args = {}
+                if 'csv_path' in params:
+                    args['csv_path'] = self.settings.get('CSV_PATH', 'data/history.csv')
+                if 'command_handler' in params:
+                    args['command_handler'] = self.command_handler
+                command_instance = item(**args)
+                self.command_handler.register_command(plugin_name, command_instance)
+                logging.info(f"Command '{plugin_name}' registered from plugin '{plugin_name}' with args: {args}.")
+                
 
     def start(self):
         self.load_plugins()
