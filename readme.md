@@ -7,11 +7,11 @@ This is a Advanced Calculator made in Python using
 
 ## Features
 1. Command-Line Interface (REPL - Read, Evaluate, Print, Loop) that facilitates direct interaction with the calculator. 
-*** Execution of operations () ***
-*** Access to extended functionalities through dynamically loaded plugins ***
-2. Plugin System to allow seamless integration of new commands and features.
-    *** Plugins Available ***
-        *** Menu - To show all the commands available ***
+<br *** Execution of operations () *** />
+<br *** Access to extended functionalities through dynamically loaded plugins ***
+2. Plugin System to allow seamless integration of new commands and features. />
+    <br *** Plugins Available *** />
+    <br *** Menu - To show all the commands available *** />
         *** Greet - To greet the user when the application starts ***
         *** Goodbye - To inform the user when the user exits ***
         *** Add - Will be used to add two values (will add the functionality to add more than two users in the near future) ***
