@@ -1,9 +1,10 @@
 ### Advanced Python Calculator
-This is a Advanced Calculator made in Python using 
+This is a Advanced Calculator made in Python for command-line integration with plugins for a robust calculations and maintaining a history using pandas library. 
 ## To install the project:
 1. git clone git@github.com:kp836/PythonAdvanceCalculator.git
 2. Install the dependencies using: pip install -r requirements.txt
 3. Run the calculator using: python3 main.py
+4. User will be guided through 
 
 ## Features
 1. Command-Line Interface (REPL - Read, Evaluate, Print, Loop) that facilitates direct interaction with the calculator. 
@@ -29,10 +30,22 @@ This is a Advanced Calculator made in Python using
 3. Established a comprehensive logging system to record:
 - Detailed application operations, data manipulations, errors, and informational messages.  
 - Different log messages by severity (INFO, WARNING, ERROR) for effective monitoring.  
-- Dynamic logging configuration through environment variables for levels and output destinations.   
+- Dynamic logging configuration through environment variables for levels and output destinations. 
+- Error messages are displayed to the users and logged so that they can be fixed.  
 4. Incomplete calculation history 
 *** Available in plugins but unable to populate the csv file ***
 ## Design Patterns 
 - Facade Pattern is used to Offer a simplified interface for complex pandas data manipulations.  
-- Command Pattern is used to structure commands within the REPL for effective calculation.  
+__The function of main.py is to start the App from the command-line and that class will handle all the functionality while the main.py is kept clean of code and functionality.__  
+- Command Pattern is used to structure commands within the REPL for effective calculation. 
+__All the commands are in one particular folder controlled by the same class making them unified and performing the tasks in a similar manner and not having to repeat the code multiple times.__  
 - Easier to Ask for Forgiveness then Permission (EAFP) is used to check for conditions and providing necessary logging and printing outputs.  
+- There are multiple examples of EAFP pattern which is to have try...except code rather than if...else conditions. One example is app/plugins/divide/__init__.py Lines 15-27. The second example is app/plugins/add/__init__.py Lines 15-24. 
+## Version Control
+- Git is used for Version Control purposes. Several branches with logical names that go with each feature. Commit history shows the program going from one version to next with full documentation provided by Github.
+## Coverage
+- 100% Coverage done using pytest, pylint, and coverage.
+## Github Actions
+- Used Github Actions and passed all tests
+## Video Link
+- Here [https://youtu.be/Bc7WegGGmuU]
