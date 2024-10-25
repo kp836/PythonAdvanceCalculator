@@ -1,3 +1,4 @@
+""" This is going to test the greet command and verify the output."""
 import pytest
 from app import App
 
