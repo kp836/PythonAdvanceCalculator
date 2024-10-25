@@ -7,23 +7,23 @@ This is a Advanced Calculator made in Python using
 
 ## Features
 1. Command-Line Interface (REPL - Read, Evaluate, Print, Loop) that facilitates direct interaction with the calculator. 
-<br *** Execution of operations () *** />
-<br *** Access to extended functionalities through dynamically loaded plugins ***
-2. Plugin System to allow seamless integration of new commands and features. />
-    <br *** Plugins Available *** />
-    <br *** Menu - To show all the commands available *** />
-        *** Greet - To greet the user when the application starts ***
-        *** Goodbye - To inform the user when the user exits ***
-        *** Add - Will be used to add two values (will add the functionality to add more than two users in the near future) ***
-        *** Subtract - Will be used to subtract two values (will  add the functionality to subtract from multiple values in the near future) ***
-        *** Multiply - Will be used to multiply two values (will add the functionality to multiply more than two values in the near future) ***
-        *** Divide - Will be used to divide and doesn't let the user divide by zero ***
-        *** Modulus - Will give you the reminder left after dividing from a number and doesn't let the user divide by zero ***
-        *** Exponent - Will give you the number raised to the power of whatever number provided ***
-        *** Square Root - Will give you the square root of the number provided ***
-        *** Average - Will give you the average of all the numbers provided (Need to be more than 2 values) ***
-        *** Variance - Will give you the variance of the numbers provided (Needs to be more than 2 values) ***
-        *** Standard Deviation - Will give you the standard deviation of all the numbers provided (Needs to be more than 2 values) ***
+- *** Execution of operations () *** 
+- *** Access to extended functionalities through dynamically loaded plugins ***
+2. Plugin System to allow seamless integration of new commands and features. 
+    *** Plugins Available *** 
+    *** Menu - To show all the commands available *** 
+    *** Greet - To greet the user when the application starts ***
+    *** Goodbye - To inform the user when the user exits ***
+    *** Add - Will be used to add two values (will add the functionality to add more than two users in the near future) ***
+    *** Subtract - Will be used to subtract two values (will  add the functionality to subtract from multiple values in the near future) ***
+    *** Multiply - Will be used to multiply two values (will add the functionality to multiply more than two values in the near future) ***
+    *** Divide - Will be used to divide and doesn't let the user divide by zero ***
+    *** Modulus - Will give you the reminder left after dividing from a number and doesn't let the user divide by zero ***
+    *** Exponent - Will give you the number raised to the power of whatever number provided ***
+    *** Square Root - Will give you the square root of the number provided ***
+    *** Average - Will give you the average of all the numbers provided (Need to be more than 2 values) ***
+    *** Variance - Will give you the variance of the numbers provided (Needs to be more than 2 values) ***
+    *** Standard Deviation - Will give you the standard deviation of all the numbers provided (Needs to be more than 2 values) ***
     *** Dynamically loads and integrates plugins without modifying the core application code. ***
     *** REPL "Menu" command that lists all available plugin commands, ensuring user discoverability and interaction. ***
 3. Established a comprehensive logging system to record:
